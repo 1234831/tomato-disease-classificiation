@@ -153,7 +153,7 @@ export const ImageUpload = () => {
   const [isLoading, setIsloading] = useState(false);
   let confidence = 0;
 
-  const sendFile = async () => {
+  const sendFile = useCallback () => {
     if (image) {
       let formData = new FormData();
       formData.append("file", selectedFile);
